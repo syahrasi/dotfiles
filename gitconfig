@@ -11,10 +11,12 @@
 	file-view-hpane-position = 222
 	file-view-vpane-position = 832
 [alias]
+  a = add .
   co = checkout
   cm = commit -m 
   ci = commit
   st = status
+  ba = branch -a
   br = branch -v
   d = diff
   dc = diff --cached
