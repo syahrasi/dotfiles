@@ -119,7 +119,11 @@ alias pw='pws'
 alias go='gnome-open .'
 # alias node='/usr/local/bin/node'
 # alias npm='/usr/local/bin/npm'
+
 alias tmux="TERM=screen-256color-bce tmux" 
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1                                                               
 export PS1='\[\e[1;33m\]\u@\h\[\e[0;33m\]\w\[\e[0m\]\[\e[32m\]$(__git_ps1 "[%s]")\[\e[0m\]\n$ '
