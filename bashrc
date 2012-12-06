@@ -126,5 +126,4 @@ if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
 fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1                                                               
-export PS1='\[\e[1;33m\]\u@\h\[\e[0;33m\]\w\[\e[0m\]\[\e[32m\]$(__git_ps1 "[%s]")\[\e[0m\]\n$ '
-# export PS1="\a\n\n\e[31;1m\u@\h on \d at \@\n\e[33;1m\w\e[0m$(__git_ps1 "[%s]")\[\e[0m\]$ "
+export PS1='\[\e[1;33m\]...\n\u@\h - \@  \[\e[0;33m\]\w \[\e[0m\]\[\e[32m\]$(__git_ps1 "[%s]")\[\e[0m\]\n\$ '
