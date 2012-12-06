@@ -1,0 +1,46 @@
+[user]
+	name = Syahrasi
+	email = syahrasi@gmail.com
+[github]
+	user = Syahrasi
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 448x98+66+24
+	history-view-vpane-position = 608
+	main-window-view = HistoryView
+	file-view-hpane-position = 222
+	file-view-vpane-position = 832
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+[instaweb]
+  local = true
+  http = apache2 -f
+  port = 4321
+  browser = firefox
+  modulepath = /usr/lib/apache2/modules
+[core]
+	autocrlf = input
+[color]            
+	ui = true
+  branch = auto    
+  diff = auto      
+  status = auto    
+[color "branch"]   
+  current = yellow reverse
+  local = yellow   
+  remote = green   
+[color "diff"]     
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold   
+  new = green bold 
+[color "status"]   
+  added = yellow   
+  changed = green  
+  untracked = cyan   
