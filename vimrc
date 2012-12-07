@@ -158,3 +158,5 @@ let g:solarized_termcolors=16
 let g:solarized_termtrans = 1
 colorscheme solarized
  
+autocmd BufNewFile,BufRead *.thor set syntax=ruby
+autocmd BufNewFile,BufRead Guardfile set syntax=ruby
