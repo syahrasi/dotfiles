@@ -1,5 +1,16 @@
 set nocompatible
 filetype off    
+ 
+if has("autocmd")
+  " Enable filetype detection
+  filetype plugin indent on
+ 
+  " Restore cursor position
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif        
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -44,8 +55,6 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-surround'
 "vim.org
-
-filetype plugin indent on
 
 let mapleader = ","
 
@@ -103,6 +112,10 @@ nmap <Leader>e :e $MYVIMRC<CR>
 "change directory to current file's directory
 nmap <Leader>cd :cd %:p:h<CR>
 
+"Invisible character colors
+highlight NonText guifg=#465457
+highlight SpecialKey guifg=#465457
+ 
 " Maps for <esc>
 ino jj <esc>
 cno jj <c-c>
@@ -131,6 +144,17 @@ nnoremap j gj
 nnoremap gk k
 nnoremap gj j
 
+"http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+" set font
+set guifont=Meslo\ LG\ L\ 12
+ 
 " mapping for tcomment
 map <leader>cc <c-_><c-_>
 map <leader><space> <c-_><space>
@@ -146,6 +170,14 @@ map <leader>cp <c-_>p
 let g:gist_private = 1
 let g:gist_get_multiplefile = 1
 
+" Buffer Explorer settings
+let g:bufExplorerSplitBelow=1
+let g:bufExplorerSplitRight=0
+
+"Invisible character colors
+highlight NonText guifg=#465457
+highlight SpecialKey guifg=#465457
+ 
 " window resizing
 map <silent> <C-h> <C-w><
 map <silent> <C-j> <C-W>-
@@ -157,6 +189,11 @@ set background=dark
 let g:solarized_termcolors=16
 let g:solarized_termtrans = 1
 colorscheme solarized
- 
+
+" add syntax hilite support for non standard ruby files 
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
 autocmd BufNewFile,BufRead Guardfile set syntax=ruby
+
+"fix backspace
+set backspace=2
+set backspace=indent,eol,start
