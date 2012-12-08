@@ -1,0 +1,12 @@
+# ~/.tmuxinator/shopify.yml
+# you can make as many tabs as you wish...
+
+project_name: JavaScript
+project_root: ~/sandbox/javascript
+tabs:
+  - shell:
+      # layout: main-vertical
+      layout: c8e0,199x48,0,0{121x48,0,0,5,77x48,122,0,6}
+      panes:
+        - vim
+        - guard
