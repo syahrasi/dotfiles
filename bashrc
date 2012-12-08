@@ -106,26 +106,32 @@ fi
 export EDITOR="/usr/local/bin/vim"
 export GIT_EDITOR='/usr/local/bin/vim'
  
+# rbenv settings
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# missing path
 export PATH=$HOME/local/bin:$PATH
 export PATH=/opt/vagrant/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
+# ruby pws / password manager gem
 export PWS="$HOME/.safe/pws"
 alias pw='pws'
 
 alias go='gnome-open .'
-# alias node='/usr/local/bin/node'
-# alias npm='/usr/local/bin/npm'
 
-alias tmux="TERM=screen-256color-bce tmux" 
+# activate 256 color support for xterm
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
 
+# call tmux with 256 color support
+alias tmux="TERM=screen-256color-bce tmux" 
+
+# custom bash prompt with optional git status
 export GIT_PS1_SHOWDIRTYSTATE=1                                                               
 export PS1='\[\e[1;33m\]...\n\u@\h | \@ \[\e[0;33m\]://\w \[\e[0m\]\[\e[32m\]$(__git_ps1 "[%s]")\[\e[0m\]\n\$ '
 
+#add current dir to tab title
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
