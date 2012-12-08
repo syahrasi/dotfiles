@@ -14,6 +14,7 @@
   a = add .
   co = checkout
   cm = commit -m 
+  cam = commit -am 
   ci = commit
   st = status
   ba = branch -a
