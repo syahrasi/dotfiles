@@ -119,7 +119,10 @@ export PATH=/usr/local/bin:$PATH
 export PWS="$HOME/.safe/pws"
 alias pw='pws'
 
+#useful aliases
 alias go='gnome-open .'
+alias lgrep='ls -la | grep'
+alias ggrep='gem list | grep'
 
 # activate 256 color support for xterm
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
