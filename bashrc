@@ -123,6 +123,10 @@ alias pw='pws'
 alias go='gnome-open .'
 alias lgrep='ls -la | grep'
 alias ggrep='gem list | grep'
+alias exshell='exec $SHELL'
+alias cd.='cd ..'
+alias cd..='cd ../..'
+alias cd...='cd ../../..'
 
 # activate 256 color support for xterm
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
