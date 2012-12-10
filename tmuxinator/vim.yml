@@ -1,0 +1,4 @@
+project_name: Vim
+project_root: ~/sandbox/vim
+tabs:
+  - vim: vim -u code/essential.vim
