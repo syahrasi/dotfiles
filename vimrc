@@ -22,6 +22,7 @@ Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/matchit.zip'
+Bundle 'Valloric/MatchTagAlways'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mileszs/ack.vim'
@@ -197,3 +198,11 @@ autocmd BufNewFile,BufRead Guardfile set syntax=ruby
 "fix backspace
 set backspace=2
 set backspace=indent,eol,start
+
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'jinja' : 1,
+    \ 'liquid' : 1,
+    \}
