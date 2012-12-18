@@ -2,7 +2,7 @@
 # you can make as many tabs as you wish...
 
 project_name: Shopify
-project_root: ~/gitrepos/new_shopify
+project_root: ~/gitrepos/shopify-theme-vexillum
 tabs:
   - editor: vim .
   - shell:
