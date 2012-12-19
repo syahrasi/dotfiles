@@ -35,6 +35,7 @@
   modulepath = /usr/lib/apache2/modules
 [core]
 	autocrlf = input
+	safecrlf = true
 [color]            
 	ui = true
   branch = auto    
