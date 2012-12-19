@@ -2,7 +2,7 @@
 # you can make as many tabs as you wish...
 
 project_name: Noorhana
-project_root: .
+project_root: ~/gitrepos/noorhana
 tabs:
   - editor: vim .
   - shell:
