@@ -139,7 +139,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 # custom bash prompt with optional git status
 export GIT_PS1_SHOWDIRTYSTATE=1                                                               
-export PS1='\[\e[1;33m\]...\n\u@\h | \@ \[\e[0;33m\]://\w \[\e[0m\]\[\e[32m\]$(__git_ps1 "[%s]")\[\e[0m\]\n\$ '
+export PS1='\[\e[1;33m\]...\n\e[31;1m\]\u@\h\[\e[0m\] | \@ \[\e[0;33m\]://\w \[\e[0m\]\[\e[32m\]$(__git_ps1 "[%s]")\[\e[0m\]\n\$ '
 
 #add current dir to tab title
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
