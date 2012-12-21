@@ -19,12 +19,14 @@
   cam = commit -am 
   ci = commit
   st = status
+  cb = checkout -b
+  cf = checkout -- 
   ba = branch -a
   br = branch -v
   d = diff
   dc = diff --cached
   dl = diff HEAD^
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  plog = log --pretty=tformat:'%C(bold red)%h%Creset %Cgreen%an%Creset %ad: %Cblue%s%Creset' --graph --date=short
   type = cat-file -t
   dump = cat-file -p
 [instaweb]
@@ -37,7 +39,7 @@
 	autocrlf = input
 	safecrlf = true
 [color]            
-	ui = true
+	ui = auto
   branch = auto    
   diff = auto      
   status = auto    
@@ -46,10 +48,10 @@
   local = yellow   
   remote = green   
 [color "diff"]     
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold   
-  new = green bold 
+  meta = yellow
+  frag = magenta
+  old = red
+  new = green
 [color "status"]   
   added = yellow   
   changed = green  

@@ -41,7 +41,7 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'bbommarito/vim-slim'
 Bundle 'wavded/vim-stylus'
 Bundle 'Lokaltog/vim-distinguished'
-Bundle 'zeis/kolor'
+Bundle 'zeis/vim-kolor'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 "tpope
 Bundle 'tpope/vim-eunuch'

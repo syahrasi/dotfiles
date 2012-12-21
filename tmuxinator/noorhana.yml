@@ -1,0 +1,14 @@
+# ~/.tmuxinator/shopify.yml
+# you can make as many tabs as you wish...
+
+project_name: Noorhana
+project_root: ~/gitrepos/noorhana
+tabs:
+  - editor: vim .
+  - shell:
+      # layout: main-vertical
+      # layout: c8e0,199x48,0,0{121x48,0,0,5,77x48,122,0,6}
+      layout: a5cd,199x48,0,0{119x48,0,0,10,79x48,120,0,11}
+      panes:
+        - git status
+        - bundle exec middleman server
