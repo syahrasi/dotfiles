@@ -143,3 +143,7 @@ export PS1='\[\e[1;33m\]...\[\e[0m\]\n\[\e[31;1m\]\u@\h\[\e[0m\] | \[\e[36m\]\@\
 
 #add current dir to tab title
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+
+# export Timezone
+TZ='Asia/Makassar'
+export TZ
