@@ -15,9 +15,9 @@
   ai = add -i
   ap = add -p
   co = checkout
+  ci = commit
   cm = commit -m 
   cam = commit -am 
-  ci = commit
   st = status
   cb = checkout -b
   cf = checkout -- 
