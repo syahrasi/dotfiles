@@ -26,7 +26,7 @@
   d = diff
   dc = diff --cached
   dl = diff HEAD^
-  hist = log --pretty=tformat:'%C(bold red)%h%Creset %Cgreen%an%Creset %ad: %Cblue%s%Creset%C(red)%d%Creset' --graph --date=short
+  hist = log --pretty=tformat:'%C(bold red)%h%Creset %ad | %Cgreen%an%Creset %Cblue%s%Creset%C(red)%d%Creset' --graph --date=short
   type = cat-file -t
   dump = cat-file -p
 [instaweb]
