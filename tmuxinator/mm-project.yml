@@ -1,7 +1,7 @@
 # ~/.tmuxinator/shopify.yml
 # you can make as many tabs as you wish...
 
-project_name: Noorhana
+project_name: Middleman Project
 project_root: .
 tabs:
   - editor: vim .
