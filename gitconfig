@@ -19,6 +19,7 @@
   cm = commit -m 
   cam = commit -am 
   st = status
+  sb = status -sb
   cb = checkout -b
   cf = checkout -- 
   ba = branch -a
