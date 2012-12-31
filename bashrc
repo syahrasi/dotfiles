@@ -128,6 +128,7 @@ alias exshell='exec $SHELL'
 alias cd.='cd ..'
 alias cd..='cd ../..'
 alias cd...='cd ../../..'
+alias bx='bundle exec'
 
 # activate 256 color support for xterm
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
