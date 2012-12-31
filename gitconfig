@@ -25,6 +25,7 @@
   br = branch -v
   d = diff
   dc = diff --cached
+  dw = diff --word-diff=color
   dl = diff HEAD^
   hist = log --pretty=tformat:'%C(bold red)%h%Creset %ad | %Cgreen%an%Creset %Cblue%s%Creset%C(red)%d%Creset' --graph --date=short
   type = cat-file -t
