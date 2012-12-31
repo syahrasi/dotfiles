@@ -1,7 +1,6 @@
-# ~/.tmuxinator/shopify.yml
-# you can make as many tabs as you wish...
+# ~/.tmuxinator/inuit.yml
 
-project_name: Shopify
+project_name: Inuit
 project_root: ~/gitrepos/inuit.css
 tabs:
   - editor: vim .
