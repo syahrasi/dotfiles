@@ -43,6 +43,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'zeis/vim-kolor'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle 'suan/vim-instant-markdown'
 "tpope
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rails'
@@ -207,3 +208,5 @@ let g:mta_filetypes = {
     \ 'jinja' : 1,
     \ 'liquid' : 1,
     \}
+
+let g:instant_markdown_slow = 1
