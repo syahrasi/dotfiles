@@ -1,0 +1,11 @@
+project_name: JavaScript
+project_root: .
+tabs:
+  - shell:
+      # layout: main-vertical
+      # layout: c8e0,199x48,0,0{121x48,0,0,5,77x48,122,0,6}
+      layout: a5cd,199x48,0,0{119x48,0,0,10,79x48,120,0,11}
+      panes:
+        - vim .
+        - guard
+  - browser: serve
