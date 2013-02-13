@@ -1,0 +1,6 @@
+project_name: Review
+project_root: .
+tabs:
+  - shell: vim .
+  - server: serve
+  - browser: gnome-open http://localhost:4000
