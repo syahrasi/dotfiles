@@ -44,6 +44,8 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'zeis/vim-kolor'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'suan/vim-instant-markdown'
+Bundle '2072/PHP-Indenting-for-VIm.git'
+Bundle 'robmiller/vim-movar'
 "tpope
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rails'
