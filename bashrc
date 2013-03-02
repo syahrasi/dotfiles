@@ -130,6 +130,8 @@ alias cd..='cd ../..'
 alias cd...='cd ../../..'
 alias bx='bundle exec'
 
+alias csscompile="compass compile --output-style compressed --force"
+
 # activate 256 color support for xterm
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
