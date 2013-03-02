@@ -46,6 +46,7 @@ Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'suan/vim-instant-markdown'
 Bundle '2072/PHP-Indenting-for-VIm.git'
 Bundle 'robmiller/vim-movar'
+Bundle 'SirVer/ultisnips'
 "tpope
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rails'
@@ -212,3 +213,6 @@ let g:mta_filetypes = {
     \}
 
 let g:instant_markdown_slow = 1
+
+" UltiSnips snippet dirs
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
