@@ -1,22 +1,22 @@
 set nocompatible
-filetype off    
- 
-if has("autocmd")
-  " Enable filetype detection
-  filetype plugin indent on
- 
-  " Restore cursor position
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-endif        
+filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" if has("autocmd")
+"   " Enable filetype detection
+"   filetype plugin indent on
+"
+"   " Restore cursor position
+"   autocmd BufReadPost *
+"     \ if line("'\"") > 1 && line("'\"") <= line("$") |
+"     \   exe "normal! g`\"" |
+"     \ endif
+" endif
+
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'kien/ctrlp.vim'
@@ -47,6 +47,7 @@ Bundle 'suan/vim-instant-markdown'
 Bundle '2072/PHP-Indenting-for-VIm.git'
 Bundle 'robmiller/vim-movar'
 Bundle 'SirVer/ultisnips'
+Bundle 'bitc/vim-bad-whitespace'
 "tpope
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rails'
@@ -61,6 +62,8 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-surround'
 "vim.org
+
+filetype plugin indent on
 
 let mapleader = ","
 
@@ -92,7 +95,7 @@ set mousehide
 
 set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
 
-set ignorecase 
+set ignorecase
 set hlsearch
 set incsearch
 set virtualedit=all
@@ -121,7 +124,7 @@ nmap <Leader>cd :cd %:p:h<CR>
 "Invisible character colors
 highlight NonText guifg=#465457
 highlight SpecialKey guifg=#465457
- 
+
 " Maps for <esc>
 ino jj <esc>
 cno jj <c-c>
@@ -138,7 +141,7 @@ nmap <leader>y "+y
 
 " shortcuts for pasting from clipboard
 nmap <leader>p "+p
- 
+
 " clear hilite
 nmap <silent> <C-N> :silent noh<CR>
 
@@ -160,7 +163,7 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 
 " set font
 set guifont=Meslo\ LG\ L\ 12
- 
+
 " mapping for tcomment
 map <leader>cc <c-_><c-_>
 map <leader><space> <c-_><space>
@@ -171,7 +174,7 @@ map <leader>cn <c-_>n
 " map <leader>ci <c-_>i
 map <leader>cr <c-_>r
 map <leader>cp <c-_>p
- 
+
 " gist-vim
 let g:gist_private = 1
 let g:gist_get_multiplefile = 1
@@ -183,7 +186,7 @@ let g:bufExplorerSplitRight=0
 "Invisible character colors
 highlight NonText guifg=#465457
 highlight SpecialKey guifg=#465457
- 
+
 " window resizing
 map <silent> <C-h> <C-w><
 map <silent> <C-j> <C-W>-
@@ -196,7 +199,7 @@ let g:solarized_termcolors=16
 let g:solarized_termtrans = 1
 colorscheme solarized
 
-" add syntax hilite support for non standard ruby files 
+" add syntax hilite support for non standard ruby files
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
 autocmd BufNewFile,BufRead Guardfile set syntax=ruby
 
@@ -215,4 +218,4 @@ let g:mta_filetypes = {
 let g:instant_markdown_slow = 1
 
 " UltiSnips snippet dirs
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "sy-snippets"]
