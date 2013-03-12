@@ -48,6 +48,8 @@ Bundle '2072/PHP-Indenting-for-VIm.git'
 Bundle 'robmiller/vim-movar'
 Bundle 'SirVer/ultisnips'
 Bundle 'bitc/vim-bad-whitespace'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'hlissner/vim-multiedit'
 "tpope
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rails'
