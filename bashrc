@@ -105,7 +105,7 @@ fi
 # my customisation
 export EDITOR="/usr/local/bin/vim"
 export GIT_EDITOR='/usr/local/bin/vim'
- 
+
 # rbenv settings
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
@@ -138,10 +138,10 @@ if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
 fi
 
 # call tmux with 256 color support
-alias tmux="TERM=screen-256color-bce tmux" 
+alias tmux="TERM=screen-256color-bce tmux"
 
 # custom bash prompt with optional git status
-export GIT_PS1_SHOWDIRTYSTATE=1                                                               
+export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\[\e[1;33m\]...\[\e[0m\]\n\[\e[31;1m\]\u@\h\[\e[0m\] | \[\e[36m\]\@\[\e[0m\]\[\e[0;33m\] ://\w \[\e[0m\]\[\e[32m\]$(__git_ps1 "[%s]")\[\e[0m\]\n\$ '
 
 #add current dir to tab title
