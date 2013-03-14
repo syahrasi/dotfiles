@@ -50,6 +50,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'bitc/vim-bad-whitespace'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'hlissner/vim-multiedit'
+Bundle 'beyondwords/vim-twig'
 "tpope
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rails'
