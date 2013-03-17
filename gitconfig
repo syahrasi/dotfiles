@@ -16,12 +16,12 @@
   ap = add -p
   co = checkout
   ci = commit
-  cm = commit -m 
-  cam = commit -am 
+  cm = commit -m
+  cam = commit -am
   st = status
   sb = status -sb
   cb = checkout -b
-  cf = checkout -- 
+  cf = checkout --
   ba = branch -a
   br = branch -v
   d = diff
@@ -40,23 +40,23 @@
 [core]
 	autocrlf = input
 	safecrlf = true
-[color]            
+[color]
 	ui = auto
-  branch = auto    
-  diff = auto      
-  status = auto    
-[color "branch"]   
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
   current = yellow reverse
-  local = yellow   
-  remote = green   
-[color "diff"]     
+  local = yellow
+  remote = green
+[color "diff"]
   meta = yellow
   frag = magenta
   old = red
   new = green
-[color "status"]   
+[color "status"]
   added = green
-  changed = red  
+  changed = red
   untracked = yellow
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
