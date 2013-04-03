@@ -51,6 +51,7 @@ Bundle 'bitc/vim-bad-whitespace'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'hlissner/vim-multiedit'
 Bundle 'beyondwords/vim-twig'
+Bundle 'wikitopian/hardmode.git'
 "tpope
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rails'
@@ -222,3 +223,7 @@ let g:instant_markdown_slow = 1
 
 " UltiSnips snippet dirs
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "sy-snippets"]
+
+" hardmode
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
