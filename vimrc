@@ -110,6 +110,9 @@ set wildmenu
 set wildmode=list:longest
 set splitright splitbelow
 
+" Underscores denote words
+set iskeyword-=_
+
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
