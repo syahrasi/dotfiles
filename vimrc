@@ -64,7 +64,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-surround'
-"vim.org
+Bundle 'tpope/vim-abolish'
 
 filetype plugin indent on
 
