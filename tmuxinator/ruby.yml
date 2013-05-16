@@ -1,12 +1,10 @@
 project_name: Ruby
-project_root: ~/sandbox/ruby/koans
+project_root: .
 tabs:
   - shell:
-      # layout: main-vertical
-      # layout: a5cd,199x48,0,0{119x48,0,0,10,79x48,120,0,11}
       layout: b03a,199x48,0,0{99x48,0,0,12,99x48,100,0[99x24,100,0,13,99x23,100,25,14]}
       panes:
         - vim .
-        - guard     
+        - guard
         - irb
 
