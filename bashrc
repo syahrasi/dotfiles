@@ -106,9 +106,14 @@ fi
 export EDITOR="/usr/local/bin/vim"
 export GIT_EDITOR='/usr/local/bin/vim'
 
-# rbenv settings
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# # rbenv settings
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
+
+# chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby ruby-1.9.3
 
 # missing path
 export PATH=$HOME/local/bin:$PATH
