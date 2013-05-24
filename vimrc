@@ -51,6 +51,7 @@ Bundle 'bitc/vim-bad-whitespace'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'hlissner/vim-multiedit'
 Bundle 'beyondwords/vim-twig'
+Bundle 'marijnh/tern_for_vim'
 "tpope
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rails'
