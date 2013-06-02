@@ -129,6 +129,8 @@ nmap <Leader>e :e $MYVIMRC<CR>
 "change directory to current file's directory
 nmap <Leader>cd :cd %:p:h<CR>
 
+nmap <Leader>x :Explore<CR>
+
 "Invisible character colors
 highlight NonText guifg=#465457
 highlight SpecialKey guifg=#465457
