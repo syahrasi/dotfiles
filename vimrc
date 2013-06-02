@@ -52,6 +52,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'hlissner/vim-multiedit'
 Bundle 'beyondwords/vim-twig'
 Bundle 'marijnh/tern_for_vim'
+Bundle 'maciakl/vim-neatstatus'
 "tpope
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rails'
