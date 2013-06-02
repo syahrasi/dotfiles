@@ -1,0 +1,13 @@
+guard 'sprockets', :destination => 'javascripts', :asset_paths => ['_assets/vendor'] do
+  watch '_assets/javascripts/jquery.js'
+  watch '_assets/javascripts/modernizr.js'
+  watch '_assets/javascripts/main.js'
+end
+
+guard 'compass' do
+  watch /^_assets\/stylesheets\/(.*)\.s[ac]ss/
+end
+
+guard 'livereload' do
+  watch(%r{.+\.(css|js|php|inc)})
+end
