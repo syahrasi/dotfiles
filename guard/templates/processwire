@@ -1,7 +1,5 @@
-guard 'sprockets', :destination => 'javascripts', :asset_paths => ['_assets/vendor'] do
-  watch '_assets/javascripts/jquery.js'
-  watch '_assets/javascripts/modernizr.js'
-  watch '_assets/javascripts/main.js'
+guard 'sprockets', :destination => 'javascripts', :asset_paths => ['_assets/components'], :root_file => ['_assets/javascripts/jquery.js', '_assets/javascripts/modernizr.js', '_assets/javascripts/main.js'  ] do
+  watch /^_assets\/javascripts\/(.*)\.js/
 end
 
 guard 'compass' do

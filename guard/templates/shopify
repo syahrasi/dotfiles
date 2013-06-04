@@ -1,0 +1,17 @@
+js_files = [
+    'javascripts/jquery.js',
+    'javascripts/modernizr.js',
+    'javascripts/jquery.mobilemenu.js',
+    'javascripts/jquery.nivo.slider.pack.js',
+    'javascripts/jquery.prettyPhoto.js',
+    'javascripts/jquery.tweet.js',
+    'javascripts/script.js',
+  ]
+
+guard 'sprockets', :destination => 'theme/assets', :asset_paths => ['components'], :root_file => js_files do
+  watch /^javascripts\/(.*)\.js/
+end
+
+guard 'compass' do
+  watch /^stylesheets\/(.*)\.s[ac]ss/
+end
