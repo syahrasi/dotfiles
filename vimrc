@@ -53,6 +53,9 @@ Bundle 'hlissner/vim-multiedit'
 Bundle 'beyondwords/vim-twig'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'maciakl/vim-neatstatus'
+Bundle 'jtmkrueger/vim-c-cr'
+Bundle 'elixir-lang/vim-elixir'
+
 "tpope
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-rails'
@@ -110,7 +113,6 @@ set cursorcolumn
 set number
 set wildmenu
 set wildmode=list:longest
-set splitright splitbelow
 
 " Underscores denote words
 set iskeyword-=_
@@ -229,3 +231,24 @@ let g:instant_markdown_slow = 1
 
 " UltiSnips snippet dirs
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "sy-snippets"]
+
+" Enable tern shortcut
+let g:tern_map_keys=1
+
+set omnifunc=syntaxcomplete#Complete
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Navigate betweeen splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
