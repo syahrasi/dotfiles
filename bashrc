@@ -155,3 +155,7 @@ PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 # export Timezone
 TZ='Asia/Makassar'
 export TZ
+
+#elixir path
+export PATH="$PATH:~/elixir-0.9.2/bin"
+alias mix="elixir ~/elixir-0.9.2/bin/mix"
