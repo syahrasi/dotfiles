@@ -34,7 +34,8 @@ Bundle 'godlygeek/tabular'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'digitaltoad/vim-jade'
-Bundle 'pangloss/vim-javascript'
+" Bundle 'pangloss/vim-javascript'
+Bundle 'jelera/vim-javascript-syntax'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'groenewege/vim-less'
 Bundle 'ecomba/vim-ruby-refactoring'
@@ -42,7 +43,6 @@ Bundle 'bbommarito/vim-slim'
 Bundle 'wavded/vim-stylus'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'zeis/vim-kolor'
-Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'suan/vim-instant-markdown'
 Bundle '2072/PHP-Indenting-for-VIm.git'
 Bundle 'robmiller/vim-movar'
@@ -52,9 +52,16 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'hlissner/vim-multiedit'
 Bundle 'beyondwords/vim-twig'
 Bundle 'marijnh/tern_for_vim'
-Bundle 'maciakl/vim-neatstatus'
 Bundle 'jtmkrueger/vim-c-cr'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'bling/vim-airline'
+Bundle 'maxmeyer/vim-taskjuggler'
+Bundle 'Yggdroot/indentLine'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'vim-scripts/visual-increment'
+
+" 'jeffkreeftmeijer/vim-numbertoggle'
+" 'maciakl/vim-neatstatus'
 
 "tpope
 Bundle 'tpope/vim-eunuch'
@@ -215,6 +222,9 @@ colorscheme solarized
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
 autocmd BufNewFile,BufRead Guardfile set syntax=ruby
 
+" add syntax hilite support for non standard php files
+autocmd BufNewFile,BufRead *.tpl set syntax=php
+
 "fix backspace
 set backspace=2
 set backspace=indent,eol,start
@@ -252,3 +262,10 @@ nnoremap <C-H> <C-W><C-H>
 
 set splitbelow
 set splitright
+
+" Keep airline status
+set laststatus=2
+
+" Numbers.vim
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>
