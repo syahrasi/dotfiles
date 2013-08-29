@@ -134,6 +134,7 @@ alias cd.='cd ..'
 alias cd..='cd ../..'
 alias cd...='cd ../../..'
 alias bx='bundle exec'
+alias rserver='ruby -run -e httpd . -p5000'
 
 alias csscompile="compass compile --output-style compressed --force"
 
