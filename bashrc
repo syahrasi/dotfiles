@@ -138,6 +138,9 @@ alias rserver='ruby -run -e httpd . -p5000'
 
 alias csscompile="compass compile --output-style compressed --force"
 
+alias phantomjs="/home/syahrasi/phantomjs-1.9.2-linux-i686/bin/phantomjs"
+
+
 # activate 256 color support for xterm
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
