@@ -59,6 +59,12 @@ Bundle 'maxmeyer/vim-taskjuggler'
 Bundle 'Yggdroot/indentLine'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'vim-scripts/visual-increment'
+Bundle 'matze/vim-move'
+Bundle 'mattn/emmet-vim'
+Bundle 'elzr/vim-json'
+Bundle 'nono/vim-handlebars'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'hwartig/vim-seeing-is-believing'
 
 " 'jeffkreeftmeijer/vim-numbertoggle'
 " 'maciakl/vim-neatstatus'
@@ -84,7 +90,7 @@ let mapleader = ","
 
 set formatoptions=t
 set formatoptions+=a
-set textwidth=72
+" set textwidth=72
 
 set nobackup
 set noswapfile
@@ -145,15 +151,17 @@ highlight NonText guifg=#465457
 highlight SpecialKey guifg=#465457
 
 " Maps for <esc>
-ino jj <esc>
-cno jj <c-c>
+ino jk <esc>
+cno jk <c-c>
 
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+" " Bubble single lines
+" nmap <C-Up> [e
+" nmap <C-Down> ]e
+" " Bubble multiple lines
+" vmap <C-Up> [egv
+" vmap <C-Down> ]egv
+
+let g:move_key_modifier = 'C'
 
 " shortcuts for copying to clipboard
 nmap <leader>y "+y
@@ -224,6 +232,7 @@ autocmd BufNewFile,BufRead Guardfile set syntax=ruby
 
 " add syntax hilite support for non standard php files
 autocmd BufNewFile,BufRead *.tpl set syntax=php
+autocmd BufNewFile,BufRead *.inc set syntax=php
 
 "fix backspace
 set backspace=2
@@ -240,7 +249,7 @@ let g:mta_filetypes = {
 let g:instant_markdown_slow = 1
 
 " UltiSnips snippet dirs
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "sy-snippets"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "sy-snippets", "angular-vim-snippets/UltiSnips"]
 
 " Enable tern shortcut
 let g:tern_map_keys=1
@@ -269,3 +278,22 @@ set laststatus=2
 " Numbers.vim
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
+
+" Seeing Is Believing
+" Gvim
+nmap <buffer> <M-r> <Plug>(seeing-is-believing-run)
+xmap <buffer> <M-r> <Plug>(seeing-is-believing-run)
+imap <buffer> <M-r> <Plug>(seeing-is-believing-run)
+
+nmap <buffer> <M-m> <Plug>(seeing-is-believing-mark)
+xmap <buffer> <M-m> <Plug>(seeing-is-believing-mark)
+imap <buffer> <M-m> <Plug>(seeing-is-believing-mark)
+
+" Terminal
+nmap <buffer> <F6> <Plug>(seeing-is-believing-run)
+xmap <buffer> <F6> <Plug>(seeing-is-believing-run)
+imap <buffer> <F6> <Plug>(seeing-is-believing-run)
+
+nmap <buffer> <F5> <Plug>(seeing-is-believing-mark)
+xmap <buffer> <F5> <Plug>(seeing-is-believing-mark)
+imap <buffer> <F5> <Plug>(seeing-is-believing-mark)
