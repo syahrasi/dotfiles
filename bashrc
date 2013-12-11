@@ -124,6 +124,10 @@ export PATH=/usr/local/bin:$PATH
 export PWS="$HOME/.safe/pws"
 alias pw='pws'
 
+# todo.txt
+export TODOTXT_DEFAULT_ACTION=ls
+alias t='~/todo/todo.sh'
+
 #useful aliases
 alias go='gnome-open .'
 alias lgrep='ls -la | grep'
