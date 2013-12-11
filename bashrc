@@ -182,3 +182,8 @@ function explain {
   # opens url in browser
   gnome-open $url
 }
+
+# omniref.com
+function ref {
+  gnome-open http://www.omniref.com/?q="$*"
+}
