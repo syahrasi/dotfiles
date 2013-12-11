@@ -137,6 +137,7 @@ alias bx='bundle exec'
 alias rserver='ruby -run -e httpd . -p5000'
 
 alias csscompile="compass compile --output-style compressed --force"
+alias bxcsscompile="bundle exec compass compile --output-style compressed --force"
 
 alias phantomjs="/home/syahrasi/phantomjs-1.9.2-linux-i686/bin/phantomjs"
 
