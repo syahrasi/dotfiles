@@ -34,7 +34,8 @@ Bundle 'godlygeek/tabular'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'digitaltoad/vim-jade'
-" Bundle 'pangloss/vim-javascript'
+Bundle 'pangloss/vim-javascript'
+Bundle 'briancollins/vim-jst'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'groenewege/vim-less'
@@ -68,6 +69,8 @@ Bundle 'hwartig/vim-seeing-is-believing'
 " Bundle 'Valloric/YouCompleteMe'
 Bundle 'dahu/LearnVim'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'goldfeld/vim-seek'
+Bundle 'justinmk/vim-gtfo'
 
 " 'jeffkreeftmeijer/vim-numbertoggle'
 " 'maciakl/vim-neatstatus'
@@ -86,6 +89,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-vinegar'
 
 filetype plugin indent on
 
@@ -300,3 +304,6 @@ imap <buffer> <F6> <Plug>(seeing-is-believing-run)
 nmap <buffer> <F5> <Plug>(seeing-is-believing-mark)
 xmap <buffer> <F5> <Plug>(seeing-is-believing-mark)
 imap <buffer> <F5> <Plug>(seeing-is-believing-mark)
+
+"ejs html binding
+au BufNewFile,BufRead *.ejs set filetype=html
