@@ -191,3 +191,16 @@ function explain {
 function ref {
   gnome-open http://www.omniref.com/?q="$*"
 }
+
+function prependDate {
+  # date=$(date +%d-%m-%Y)
+  date=$(date -d "now ${2} day" +%d-%m-%Y)
+  newname=${date}_${1}
+  mv $1 $newname
+  echo "Renaming ${1} to ${newname}"
+}
+
+function checkdate {
+  date=$(date +%Y%m%d)
+  echo $date
+}
