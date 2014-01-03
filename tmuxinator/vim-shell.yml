@@ -1,0 +1,8 @@
+project_name: Vim-Shell
+project_root: .
+tabs:
+  - shell:
+      layout: a5cd,199x48,0,0{119x48,0,0,10,79x48,120,0,11}
+      panes:
+        - vim
+        - pwd
