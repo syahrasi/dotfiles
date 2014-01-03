@@ -140,6 +140,8 @@ alias cd...='cd ../../..'
 alias bx='bundle exec'
 alias rserver='ruby -run -e httpd . -p5000'
 
+alias grabpw='wget https://raw.github.com/somatonic/PWOnlineInstaller/master/grabpw.php'
+
 alias csscompile="compass compile --output-style compressed --force"
 alias bxcsscompile="bundle exec compass compile --output-style compressed --force"
 
