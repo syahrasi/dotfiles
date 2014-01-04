@@ -106,6 +106,10 @@ fi
 export EDITOR="/usr/bin/vim"
 export GIT_EDITOR='/usr/bin/vim'
 
+export PATH="~/.tmuxifier/bin:$PATH"
+
+eval "$(tmuxifier init -)"
+
 # # rbenv settings
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # eval "$(rbenv init -)"
