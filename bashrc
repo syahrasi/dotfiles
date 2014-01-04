@@ -206,3 +206,9 @@ function checkdate {
   date=$(date +%Y%m%d)
   echo $date
 }
+
+# Create a directory then cd into it
+function mkdircd {
+  mkdir $1
+  cd $1
+}
