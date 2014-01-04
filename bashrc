@@ -151,6 +151,8 @@ alias bxcsscompile="bundle exec compass compile --output-style compressed --forc
 
 alias phantomjs="/home/syahrasi/phantomjs-1.9.2-linux-i686/bin/phantomjs"
 
+alias mxf="tmuxifier"
+
 
 # activate 256 color support for xterm
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
@@ -214,4 +216,9 @@ function checkdate {
 # Create a directory then cd into it
 function mkdircd {
   mkdir $1 && cd $_
+}
+
+function mx {
+  echo "tmuxifier ${1} ${2}"
+  tmuxifier $1 $2
 }
