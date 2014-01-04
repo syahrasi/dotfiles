@@ -209,6 +209,5 @@ function checkdate {
 
 # Create a directory then cd into it
 function mkdircd {
-  mkdir $1
-  cd $1
+  mkdir $1 && cd $_
 }
