@@ -222,3 +222,7 @@ function mx {
   echo "tmuxifier ${1} ${2}"
   tmuxifier $1 $2
 }
+
+function docup {
+ curl -X POST --data-urlencode content@"$1" http://documentup.com/compiled > "`basename $1 .md`.html"
+}
