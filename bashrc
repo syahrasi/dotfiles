@@ -174,8 +174,8 @@ TZ='Asia/Makassar'
 export TZ
 
 #elixir path
-export PATH="$PATH:~/elixir-0.9.2/bin"
-alias mix="elixir ~/elixir-0.9.2/bin/mix"
+export PATH="$PATH:~/elixir/bin"
+alias mix="elixir ~/elixir/bin/mix"
 
 function explain {
   # base url with first command already injected
