@@ -117,7 +117,7 @@ eval "$(tmuxifier init -)"
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby ruby-1.9.3
+chruby ruby-2.0.0
 
 # missing path
 export PATH=$HOME/local/bin:$PATH
