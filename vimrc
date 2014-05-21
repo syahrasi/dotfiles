@@ -56,6 +56,7 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'jtmkrueger/vim-c-cr'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'bling/vim-airline'
+Bundle 'Zuckonit/vim-airline-todo'
 Bundle 'maxmeyer/vim-taskjuggler'
 Bundle 'Yggdroot/indentLine'
 Bundle 'myusuf3/numbers.vim'
@@ -71,6 +72,9 @@ Bundle 'dahu/LearnVim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'goldfeld/vim-seek'
 Bundle 'justinmk/vim-gtfo'
+Bundle '29decibel/vim-stringify'
+Bundle 'gcmt/wildfire.vim'
+Bundle 'terryma/vim-expand-region'
 
 " 'jeffkreeftmeijer/vim-numbertoggle'
 " 'maciakl/vim-neatstatus'
@@ -307,3 +311,6 @@ imap <buffer> <F5> <Plug>(seeing-is-believing-mark)
 
 "ejs html binding
 au BufNewFile,BufRead *.ejs set filetype=html
+
+" Stringify
+map <leader>g :call Stringify()<CR>
