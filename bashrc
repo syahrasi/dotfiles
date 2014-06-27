@@ -143,6 +143,7 @@ alias cd..='cd ../..'
 alias cd...='cd ../../..'
 alias bx='bundle exec'
 alias rserver='ruby -run -e httpd . -p5000'
+alias pserver='php -S localhost:5555'
 
 alias grabpw='wget https://raw.github.com/somatonic/PWOnlineInstaller/master/grabpw.php'
 
@@ -153,6 +154,17 @@ alias phantomjs="/home/syahrasi/phantomjs-1.9.2-linux-i686/bin/phantomjs"
 
 alias mxf="tmuxifier"
 
+alias clipboard='xclip -sel clip'
+
+# Generator Stuff
+alias g:m="php artisan generate:model"
+alias g:c="php artisan generate:controller"
+alias g:v="php artisan generate:view"
+alias g:s="php artisan generate:seed"
+alias g:mig="php artisan generate:migration"
+alias g:r="php artisan generate:resource"
+
+alias artis="php artisan --env='local'"
 
 # activate 256 color support for xterm
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
@@ -226,3 +238,7 @@ function mx {
 function docup {
  curl -X POST --data-urlencode content@"$1" http://documentup.com/compiled > "`basename $1 .md`.html"
 }
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+source ~/.fzf.bash

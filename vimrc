@@ -46,6 +46,8 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'zeis/vim-kolor'
 Bundle 'suan/vim-instant-markdown'
 Bundle '2072/PHP-Indenting-for-VIm.git'
+Bundle 'StanAngeloff/php.vim'
+Bundle 'xsbeats/vim-blade'
 Bundle 'robmiller/vim-movar'
 Bundle 'SirVer/ultisnips'
 Bundle 'bitc/vim-bad-whitespace'
@@ -75,6 +77,12 @@ Bundle 'justinmk/vim-gtfo'
 Bundle '29decibel/vim-stringify'
 Bundle 'gcmt/wildfire.vim'
 Bundle 'terryma/vim-expand-region'
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/unite.vim'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'honza/vim-snippets'
+" Bundle 'm2mdas/phpcomplete-extended'
+" Bundle 'm2mdas/phpcomplete-extended-laravel'
 
 " 'jeffkreeftmeijer/vim-numbertoggle'
 " 'maciakl/vim-neatstatus'
@@ -260,12 +268,13 @@ let g:mta_filetypes = {
 let g:instant_markdown_slow = 1
 
 " UltiSnips snippet dirs
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "sy-snippets", "angular-vim-snippets/UltiSnips"]
+let g:UltiSnipsSnippetDirectories=["vim-snippets/UltiSnips", "sy-snippets", "angular-vim-snippets/UltiSnips"]
 
 " Enable tern shortcut
 let g:tern_map_keys=1
 
 set omnifunc=syntaxcomplete#Complete
+" set omnifunc=phpcomplete#CompletePHP
 
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -273,6 +282,9 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType php set ft=php.laravel
+" autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 " Navigate betweeen splits
 nnoremap <C-J> <C-W><C-J>
@@ -314,3 +326,8 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 " Stringify
 map <leader>g :call Stringify()<CR>
+
+
+" Disable tab for youcompleteme
+" let g:ycm_key_list_select_completion=[]
+" let g:ycm_key_list_previous_completion=[]
