@@ -86,6 +86,7 @@ Bundle 'honza/vim-snippets'
 
 " 'jeffkreeftmeijer/vim-numbertoggle'
 " 'maciakl/vim-neatstatus'
+Bundle 'DataWraith/auto_mkdir'
 
 "tpope
 Bundle 'tpope/vim-eunuch'
@@ -151,6 +152,7 @@ set iskeyword-=_
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+nnoremap <space>p :CtrlP .<CR>
 
 "set wrap
 map <Leader>w :set wrap!<CR>
@@ -158,6 +160,7 @@ map <Leader>w :set wrap!<CR>
 map <Leader>l :set list!<CR>
 "source .vimrc on write
 " autocmd bufwritepost .vimrc source $MYVIMRC
+nnoremap <leader>s :source $MYVIMRC<CR>
 "edit .vimrc
 nmap <Leader>e :e $MYVIMRC<CR>
 "change directory to current file's directory
@@ -268,7 +271,7 @@ let g:mta_filetypes = {
 let g:instant_markdown_slow = 1
 
 " UltiSnips snippet dirs
-let g:UltiSnipsSnippetDirectories=["vim-snippets/UltiSnips", "sy-snippets", "angular-vim-snippets/UltiSnips"]
+let g:UltiSnipsSnippetDirectories=["bundle/vim-snippets/UltiSnips", "sy-snippets", "angular-vim-snippets/UltiSnips"]
 
 " Enable tern shortcut
 let g:tern_map_keys=1
@@ -331,3 +334,10 @@ map <leader>g :call Stringify()<CR>
 " Disable tab for youcompleteme
 " let g:ycm_key_list_select_completion=[]
 " let g:ycm_key_list_previous_completion=[]
+
+let g:user_emmet_settings = {
+\  'php' : {
+\    'extends' : 'html',
+\    'filters' : 'c',
+\  },
+\}
