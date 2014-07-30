@@ -175,6 +175,7 @@ fi
 alias tmux="TERM=screen-256color-bce tmux"
 
 # custom bash prompt with optional git status
+source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\[\e[1;33m\]...\[\e[0m\]\n\[\e[31;1m\]\u@\h\[\e[0m\] | \[\e[36m\]\@\[\e[0m\]\[\e[0;33m\] ://\w \[\e[0m\]\[\e[32m\]$(__git_ps1 "[%s]")\[\e[0m\]\n\$ '
 
