@@ -329,3 +329,5 @@ let g:user_emmet_settings = {
 \    'filters' : 'c',
 \  },
 \}
+
+set shell=$SHELL
