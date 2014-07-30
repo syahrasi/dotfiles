@@ -117,7 +117,7 @@ export GIT_EDITOR='/usr/bin/vim'
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby ruby-2.0.0
+chruby ruby-2.1
 
 # missing path
 export PATH=$HOME/local/bin:$PATH
