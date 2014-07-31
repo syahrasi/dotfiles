@@ -106,9 +106,16 @@ fi
 export EDITOR="/usr/bin/vim"
 export GIT_EDITOR='/usr/bin/vim'
 
-# export PATH="~/.tmuxifier/bin:$PATH"
+export PATH="~/.tmuxifier/bin:$PATH"
 #
-# eval "$(tmuxifier init -)"
+eval "$(tmuxifier init -)"
+
+alias mxf="tmuxifier"
+
+function mx {
+  echo "tmuxifier ${1} ${2}"
+  tmuxifier $1 $2
+}
 
 # # rbenv settings
 # export PATH="$HOME/.rbenv/bin:$PATH"
@@ -152,7 +159,6 @@ alias bxcsscompile="bundle exec compass compile --output-style compressed --forc
 
 alias phantomjs="/home/syahrasi/phantomjs-1.9.2-linux-i686/bin/phantomjs"
 
-# alias mxf="tmuxifier"
 
 alias clipboard='xclip -sel clip'
 
@@ -231,10 +237,6 @@ function mkdircd {
   mkdir $1 && cd $_
 }
 
-# function mx {
-#   echo "tmuxifier ${1} ${2}"
-#   tmuxifier $1 $2
-# }
 
 function docup {
  curl -X POST --data-urlencode content@"$1" http://documentup.com/compiled > "`basename $1 .md`.html"
