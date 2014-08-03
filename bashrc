@@ -237,7 +237,10 @@ function mkdircd {
   mkdir $1 && cd $_
 }
 
-
 function docup {
  curl -X POST --data-urlencode content@"$1" http://documentup.com/compiled > "`basename $1 .md`.html"
+}
+
+function tardir {
+  find * -type d -maxdepth 0 -exec tar czvf {}.tar.gz {}  \;
 }
