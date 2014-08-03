@@ -124,6 +124,8 @@ function mx {
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
+export PATH="$HOME/.gem/ruby/2.1.2/bin:$PATH"
+
 chruby ruby-2.1
 
 # missing path
