@@ -124,9 +124,15 @@ function mx {
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-export PATH="$HOME/.gem/ruby/2.1.2/bin:$PATH"
+# export PATH="$HOME/.gem/ruby/2.1.2/bin:$PATH"
 
 chruby ruby-2.1
+
+alias sudo='sudo '
+
+# thor
+# /home/syahrasi/.gem/ruby/2.1.2/bin/thor
+alias thor="/home/syahrasi/.gem/ruby/2.1.2/bin/thor"
 
 # missing path
 export PATH=$HOME/local/bin:$PATH
@@ -186,6 +192,9 @@ alias tmux="TERM=screen-256color-bce tmux"
 source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\[\e[1;33m\]...\[\e[0m\]\n\[\e[31;1m\]\u@\h\[\e[0m\] | \[\e[36m\]\@\[\e[0m\]\[\e[0;33m\] ://\w \[\e[0m\]\[\e[32m\]$(__git_ps1 "[%s]")\[\e[0m\]\n\$ '
+
+# git autocompletion
+source ~/.git-completion.bash
 
 #add current dir to tab title
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
