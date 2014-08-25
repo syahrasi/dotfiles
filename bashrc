@@ -178,7 +178,7 @@ alias g:s="php artisan generate:seed"
 alias g:mig="php artisan generate:migration"
 alias g:r="php artisan generate:resource"
 
-alias artisan="php artisan --env='local'"
+alias art="php artisan --env='local'"
 
 # activate 256 color support for xterm
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
