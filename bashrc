@@ -230,6 +230,9 @@ function ref {
   gnome-open http://www.omniref.com/?q="$*"
 }
 
+# prependDate filename //for tomorrow's date
+# prependDate filename 0 //for today's date
+# prependDate filename -1 //for yesterdays' date
 function prependDate {
   # date=$(date +%d-%m-%Y)
   date=$(date -d "now ${2} day" +%d-%m-%Y)
