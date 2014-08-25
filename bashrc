@@ -103,8 +103,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # my customisation
-export EDITOR="/usr/bin/vim"
-export GIT_EDITOR='/usr/bin/vim'
+export EDITOR="/usr/local/bin/vim"
+export GIT_EDITOR='/usr/local/bin/vim'
 
 export PATH="~/.tmuxifier/bin:$PATH"
 #
