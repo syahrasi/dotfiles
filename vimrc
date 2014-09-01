@@ -27,7 +27,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'groenewege/vim-less'
 Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'bbommarito/vim-slim'
+" Plugin 'bbommarito/vim-slim'
 Plugin 'wavded/vim-stylus'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'zeis/vim-kolor'
@@ -74,6 +74,8 @@ Plugin 'honza/vim-snippets'
 " 'jeffkreeftmeijer/vim-numbertoggle'
 " 'maciakl/vim-neatstatus'
 Plugin 'DataWraith/auto_mkdir'
+Plugin 'tobyS/vmustache'
+Plugin 'tobyS/pdv'
 
 "tpope
 Plugin 'tpope/vim-eunuch'
@@ -331,3 +333,7 @@ let g:user_emmet_settings = {
 \}
 
 set shell=$SHELL
+
+"pdv
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
