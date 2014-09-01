@@ -134,10 +134,18 @@ alias sudo='sudo '
 # /home/syahrasi/.gem/ruby/2.1.2/bin/thor
 alias thor="/home/syahrasi/.gem/ruby/2.1.2/bin/thor"
 
+
 # missing path
 export PATH=$HOME/local/bin:$PATH
 export PATH=/opt/vagrant/bin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
+
+export INFOPATH=/usr/local/texlive/2014/texmf-dist/doc/info:$INFOPATH
+export MANPATH=/usr/local/texlive/2014/texmf-dist/doc/man:$MANPATH
+
+alias phantomjs="/usr/local/bin/phantomjs"
 
 # ruby pws / password manager gem
 export PWS="$HOME/.safe/pws"
@@ -235,7 +243,7 @@ function ref {
 # prependDate filename -1 //for yesterdays' date
 function prependDate {
   # date=$(date +%d-%m-%Y)
-  date=$(date -d "now ${2} day" +%d-%m-%Y)
+  date=$(date -d "now ${2} day" +%Y-%m-%d)
   newname=${date}_${1}
   mv $1 $newname
   echo "Renaming ${1} to ${newname}"
