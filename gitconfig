@@ -23,6 +23,7 @@
   cb = checkout -b
   cf = checkout --
   ba = branch -a
+  bd = branch -d
   br = branch -v
   d = diff
   dc = diff --cached

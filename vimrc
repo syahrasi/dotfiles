@@ -68,6 +68,7 @@ Plugin 'Shougo/vimproc'
 Plugin 'Shougo/unite.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'honza/vim-snippets'
+Plugin 'greyblake/vim-preview'
 " Plugin 'm2mdas/phpcomplete-extended'
 " Plugin 'm2mdas/phpcomplete-extended-laravel'
 
@@ -76,6 +77,16 @@ Plugin 'honza/vim-snippets'
 Plugin 'DataWraith/auto_mkdir'
 Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
+" Plugin 'tobyS/skeletons.vim'
+" Plugin 'stephpy/vim-php-cs-fixer'
+" Plugin 'pgilad/vim-skeletons'
+Plugin 'majutsushi/tagbar'
+Plugin 'craigemery/vim-autotag'
+" Plugin 'vivkin/flatland.vim'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'shime/vim-livedown'
+Plugin 'trusktr/seti.vim'
+
 
 "tpope
 Plugin 'tpope/vim-eunuch'
@@ -143,6 +154,7 @@ set iskeyword-=_
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 nnoremap <space>p :CtrlP .<CR>
+nnoremap <space>t :CtrlPBufTagAll<CR>
 
 "set wrap
 map <Leader>w :set wrap!<CR>
@@ -336,4 +348,27 @@ set shell=$SHELL
 
 "pdv
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
+" nnoremap <buffer> <C-D> :call pdv#DocumentWithSnip()<CR>
+nmap <Leader>d :call pdv#DocumentWithSnip()<CR>
+
+" tagbar
+nmap <F8> :TagbarToggle<CR>
+
+nmap <Leader>m :PreviewMarkdown<CR>
+
+nmap <Leader>t :!clear && phpunit<CR>
+nmap <Leader>t5 :!clear && phpunit %<CR>
+
+" incremental search
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" should markdown preview get shown automatically upon opening markdown buffer
+let g:livedown_autorun = 0
+
+" should the browser window pop-up upon previewing
+let g:livedown_open = 1
+
+" the port on which Livedown server will run
+let g:livedown_port = 1337

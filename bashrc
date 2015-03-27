@@ -126,7 +126,7 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 # export PATH="$HOME/.gem/ruby/2.1.2/bin:$PATH"
 
-chruby ruby-2.1
+chruby ruby-2.2.1
 
 alias sudo='sudo '
 
@@ -140,12 +140,15 @@ export PATH=$HOME/local/bin:$PATH
 export PATH=/opt/vagrant/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=vendor/bin:$PATH
 export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
 
 export INFOPATH=/usr/local/texlive/2014/texmf-dist/doc/info:$INFOPATH
 export MANPATH=/usr/local/texlive/2014/texmf-dist/doc/man:$MANPATH
 
 alias phantomjs="/usr/local/bin/phantomjs"
+
+alias pcf="php-cs-fixer"
 
 # ruby pws / password manager gem
 export PWS="$HOME/.safe/pws"
