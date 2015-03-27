@@ -106,7 +106,7 @@ fi
 export EDITOR="/usr/local/bin/vim"
 export GIT_EDITOR='/usr/local/bin/vim'
 
-export PATH="~/.tmuxifier/bin:$PATH"
+# export PATH="~/.tmuxifier/bin:$PATH"
 #
 eval "$(tmuxifier init -)"
 
@@ -136,12 +136,12 @@ alias thor="/home/syahrasi/.gem/ruby/2.1.2/bin/thor"
 
 
 # missing path
-export PATH=$HOME/local/bin:$PATH
-export PATH=/opt/vagrant/bin:$PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/.composer/vendor/bin:$PATH
-export PATH=vendor/bin:$PATH
-export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
+# export PATH=$HOME/local/bin:$PATH
+# export PATH=/opt/vagrant/bin:$PATH
+# export PATH=/usr/local/bin:$PATH
+# export PATH=$HOME/.composer/vendor/bin:$PATH
+# export PATH=vendor/bin:$PATH
+# export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
 
 export INFOPATH=/usr/local/texlive/2014/texmf-dist/doc/info:$INFOPATH
 export MANPATH=/usr/local/texlive/2014/texmf-dist/doc/man:$MANPATH
@@ -215,8 +215,8 @@ TZ='Asia/Makassar'
 export TZ
 
 #elixir path
-export PATH="$PATH:~/elixir/bin"
-alias mix="elixir ~/elixir/bin/mix"
+# export PATH="$PATH:~/elixir/bin"
+# alias mix="elixir ~/elixir/bin/mix"
 
 function explain {
   # base url with first command already injected
