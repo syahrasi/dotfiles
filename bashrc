@@ -108,25 +108,18 @@ export GIT_EDITOR='/usr/local/bin/vim'
 
 # export PATH="~/.tmuxifier/bin:$PATH"
 #
-eval "$(tmuxifier init -)"
-
-alias mxf="tmuxifier"
-
-function mx {
-  echo "tmuxifier ${1} ${2}"
-  tmuxifier $1 $2
-}
+# eval "$(tmuxifier init -)"
+#
+# alias mxf="tmuxifier"
+#
+# function mx {
+#   echo "tmuxifier ${1} ${2}"
+#   tmuxifier $1 $2
+# }
 
 # # rbenv settings
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # eval "$(rbenv init -)"
-
-# chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-# export PATH="$HOME/.gem/ruby/2.1.2/bin:$PATH"
-
-chruby ruby-2.2.1
 
 alias sudo='sudo '
 
@@ -136,17 +129,16 @@ alias thor="/home/syahrasi/.gem/ruby/2.1.2/bin/thor"
 
 
 # missing path
-# export PATH=$HOME/local/bin:$PATH
-# export PATH=/opt/vagrant/bin:$PATH
-# export PATH=/usr/local/bin:$PATH
-# export PATH=$HOME/.composer/vendor/bin:$PATH
-# export PATH=vendor/bin:$PATH
-# export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
+export PATH=$HOME/local/bin:$PATH
+export PATH=/opt/vagrant/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=vendor/bin:$PATH
+export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
 
 export INFOPATH=/usr/local/texlive/2014/texmf-dist/doc/info:$INFOPATH
 export MANPATH=/usr/local/texlive/2014/texmf-dist/doc/man:$MANPATH
 
-alias phantomjs="/usr/local/bin/phantomjs"
 
 alias pcf="php-cs-fixer"
 
@@ -176,8 +168,8 @@ alias grabpw='wget https://raw.github.com/somatonic/PWOnlineInstaller/master/gra
 alias csscompile="compass compile --output-style compressed --force"
 alias bxcsscompile="bundle exec compass compile --output-style compressed --force"
 
-alias phantomjs="/home/syahrasi/phantomjs-1.9.2-linux-i686/bin/phantomjs"
-
+# alias phantomjs="/home/syahrasi/phantomjs-1.9.2-linux-i686/bin/phantomjs"
+# alias phantomjs="/usr/local/bin/phantomjs"
 
 alias clipboard='xclip -sel clip'
 
@@ -269,3 +261,11 @@ function docup {
 function tardir {
   find * -type d -maxdepth 0 -exec tar czvf {}.tar.gz {}  \;
 }
+
+# chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+# export PATH="$HOME/.gem/ruby/2.1.2/bin:$PATH"
+
+chruby ruby-2.2.1
+
