@@ -3,10 +3,15 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
+" Plugin 'gmarik/Vundle.vim'
+" Plugin 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized.git'
-Plugin 'kien/ctrlp.vim'
+Plugin 'chriskempson/base16-vim'
+" Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'ivalkeen/vim-ctrlp-tjump'
+Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'vim-scripts/bufexplorer.zip'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'Valloric/MatchTagAlways'
@@ -15,26 +20,37 @@ Plugin 'mattn/webapi-vim'
 Plugin 'walm/jshint.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'kana/vim-textobj-user'
+Plugin 'whatyouhide/vim-textobj-xmlattr'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'Raimondi/delimitMate'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'godlygeek/tabular'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'pangloss/vim-javascript'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'digitaltoad/vim-jade'
+" Plugin 'pangloss/vim-javascript'
 Plugin 'briancollins/vim-jst'
+Plugin 'posva/vim-vue'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'othree/yajs.vim'
+" Plugin 'ahayman/vim-nodejs-complete'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'groenewege/vim-less'
+" Plugin 'guiniol/vim-showspaces'
+" Plugin 'groenewege/vim-less'
 Plugin 'ecomba/vim-ruby-refactoring'
 " Plugin 'bbommarito/vim-slim'
 Plugin 'wavded/vim-stylus'
 Plugin 'Lokaltog/vim-distinguished'
-Plugin 'zeis/vim-kolor'
-Plugin 'suan/vim-instant-markdown'
-Plugin '2072/PHP-Indenting-for-VIm.git'
+" Plugin 'zeis/vim-kolor'
+" Plugin 'suan/vim-instant-markdown'
+" Plugin '2072/PHP-Indenting-for-VIm.git'
 Plugin 'StanAngeloff/php.vim'
-Plugin 'xsbeats/vim-blade'
+Plugin 'arnaud-lb/vim-php-namespace'
+" Plugin 'JamshedVesuna/vim-markdown-preview'
+" Plugin 'xsbeats/vim-blade'
+Plugin 'jwalton512/vim-blade'
+Plugin 'adriaanzon/vim-textobj-blade-directive'
 Plugin 'robmiller/vim-movar'
 Plugin 'SirVer/ultisnips'
 Plugin 'bitc/vim-bad-whitespace'
@@ -43,10 +59,10 @@ Plugin 'hlissner/vim-multiedit'
 Plugin 'beyondwords/vim-twig'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'jtmkrueger/vim-c-cr'
-Plugin 'elixir-lang/vim-elixir'
+" Plugin 'elixir-lang/vim-elixir'
 Plugin 'bling/vim-airline'
 Plugin 'Zuckonit/vim-airline-todo'
-Plugin 'maxmeyer/vim-taskjuggler'
+" Plugin 'maxmeyer/vim-taskjuggler'
 Plugin 'Yggdroot/indentLine'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'vim-scripts/visual-increment'
@@ -64,11 +80,14 @@ Plugin 'justinmk/vim-gtfo'
 Plugin '29decibel/vim-stringify'
 Plugin 'gcmt/wildfire.vim'
 Plugin 'terryma/vim-expand-region'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/unite.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'honza/vim-snippets'
-Plugin 'greyblake/vim-preview'
+Plugin 'sniphpets/sniphpets'
+Plugin 'sniphpets/sniphpets-common'
+" Plugin 'greyblake/vim-preview'
 " Plugin 'm2mdas/phpcomplete-extended'
 " Plugin 'm2mdas/phpcomplete-extended-laravel'
 
@@ -80,12 +99,27 @@ Plugin 'tobyS/pdv'
 " Plugin 'tobyS/skeletons.vim'
 " Plugin 'stephpy/vim-php-cs-fixer'
 " Plugin 'pgilad/vim-skeletons'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'dericofilho/vim-phpfmt'
+Plugin 'ervandew/supertab'
+
+" Ctags
 Plugin 'majutsushi/tagbar'
-Plugin 'craigemery/vim-autotag'
+" Plugin 'craigemery/vim-autotag'
+Plugin 'szw/vim-tags'
+" Plugin 'kbairak/ColumnTags.vim'
+
 " Plugin 'vivkin/flatland.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'shime/vim-livedown'
 Plugin 'trusktr/seti.vim'
+Plugin 'wellle/visual-split.vim'
+Plugin 'freitass/todo.txt-vim'
+" Plugin 'tkhren/vim-fake'
+Plugin 'scrooloose/nerdtree'
+Plugin 'rking/ag.vim'
+Plugin 'skwp/greplace.vim'
+Plugin 'dahu/vim-fanfingtastic'
 
 
 "tpope
@@ -101,6 +135,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-surround'
+" Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-vinegar'
 
@@ -132,6 +167,7 @@ set hidden
 set autoread
 set cpoptions+=$
 set ch=2
+set autowriteall
 
 set mousehide
 
@@ -155,13 +191,21 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 nnoremap <space>p :CtrlP .<CR>
 nnoremap <space>t :CtrlPBufTagAll<CR>
+nnoremap <space>tt :CtrlPTag<CR>
+nnoremap <space>m :CtrlPMRUFiles<CR>
+nnoremap <space>b :CtrlPBuffer<CR>
+
+let g:ctrlp_custom_ignore = 'node_modules\|git'
 
 "set wrap
 map <Leader>w :set wrap!<CR>
 "show hidden character
 map <Leader>l :set list!<CR>
 "source .vimrc on write
-" autocmd bufwritepost .vimrc source $MYVIMRC
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
 nnoremap <leader>s :source $MYVIMRC<CR>
 "edit .vimrc
 nmap <Leader>e :e $MYVIMRC<CR>
@@ -212,6 +256,7 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
+
 " set font
 set guifont=Meslo\ LG\ L\ 12
 
@@ -249,6 +294,8 @@ set background=dark
 let g:solarized_termcolors=16
 let g:solarized_termtrans = 1
 colorscheme solarized
+" colorscheme base16-ocean
+" let base16colorspace=256
 
 " add syntax hilite support for non standard ruby files
 autocmd BufNewFile,BufRead *.thor set syntax=ruby
@@ -257,6 +304,15 @@ autocmd BufNewFile,BufRead Guardfile set syntax=ruby
 " add syntax hilite support for non standard php files
 autocmd BufNewFile,BufRead *.tpl set syntax=php
 autocmd BufNewFile,BufRead *.inc set syntax=php
+autocmd BufNewFile,BufRead *.vue set syntax=javascript
+
+let g:phpfmt_on_save = get(g:, 'phpfmt_on_save', 1)
+let g:phpfmt_php_path = "php"
+let g:phpfmt_enable_default_mapping = 1
+let g:phpfmt_exclude_list = "blade.php"
+let g:phpfmt_psr1 = 1
+let g:phpfmt_psr2 = 1
+
 
 "fix backspace
 set backspace=2
@@ -270,10 +326,22 @@ let g:mta_filetypes = {
     \ 'liquid' : 1,
     \}
 
-let g:instant_markdown_slow = 1
-
 " UltiSnips snippet dirs
-let g:UltiSnipsSnippetDirectories=["bundle/vim-snippets/UltiSnips", "sy-snippets", "angular-vim-snippets/UltiSnips"]
+" let g:UltiSnipsSnippetDirectories=["bundle/vim-snippets/UltiSnips", "sy-snippets", "angular-vim-snippets/UltiSnips"]
+
+" Track the engine.
+" Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+" Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " Enable tern shortcut
 let g:tern_map_keys=1
@@ -289,6 +357,8 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php set ft=php.laravel
+autocmd Filetype php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
 " autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 " Navigate betweeen splits
@@ -354,8 +424,6 @@ nmap <Leader>d :call pdv#DocumentWithSnip()<CR>
 " tagbar
 nmap <F8> :TagbarToggle<CR>
 
-nmap <Leader>m :PreviewMarkdown<CR>
-
 nmap <Leader>t :!clear && phpunit<CR>
 nmap <Leader>t5 :!clear && phpunit %<CR>
 
@@ -364,11 +432,66 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
-" should markdown preview get shown automatically upon opening markdown buffer
-let g:livedown_autorun = 0
 
-" should the browser window pop-up upon previewing
-let g:livedown_open = 1
+"Add simple highlight removal.
+nmap <Leader><space> :nohlsearch<cr>
 
-" the port on which Livedown server will run
-let g:livedown_port = 1337
+nmap mp :LivedownToggle<CR>
+
+runtime macros/matchit.vim
+"/
+"/ Vim Blade
+"/
+
+" Use 'd' to surround with a Blade directive.
+let b:surround_{char2nr("d")} = "@\1Blade directive: @\1 \r @end\1\r\[( \]\\+.*\r\1"
+" Some aliases for convenience.
+let b:surround_{char2nr("D")} = b:surround_{char2nr("d")}
+let b:surround_{char2nr("@")} = b:surround_{char2nr("d")}
+
+"/
+"/ NERDTree
+"/
+let NERDTreeHijackNetrw = 0
+
+"Make NERDTree easier to toggle.
+nmap <space>n :NERDTreeToggle<cr>
+
+
+"/
+"/ Ag
+"/
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
+
+"/
+"/ Easy Align
+"/
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+
+"/
+"/ Php Namespace
+"/
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
+
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
+
+"-------------Laravel--------------
+
+nmap <leader>lr :e app/Http/routes.php<cr>
+nmap <leader>lc :CtrlP<cr>app/Http/Controllers/
+nmap <leader>lv :CtrlP<cr>resources/views/
+nmap <leader>lem :e app/<cr>
+nmap <leader>lec :e app/Http/Controllers/<cr>
+nmap <leader>lev :e resources/views/<cr>

@@ -103,8 +103,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # my customisation
-export EDITOR="/usr/local/bin/vim"
-export GIT_EDITOR='/usr/local/bin/vim'
+# export EDITOR="/usr/local/bin/vim"
+export EDITOR="/usr/bin/vim"
+# export GIT_EDITOR='/usr/local/bin/vim'
+export GIT_EDITOR='/usr/bin/vim'
 
 # export PATH="~/.tmuxifier/bin:$PATH"
 #
@@ -127,9 +129,14 @@ alias sudo='sudo '
 # /home/syahrasi/.gem/ruby/2.1.2/bin/thor
 alias thor="/home/syahrasi/.gem/ruby/2.1.2/bin/thor"
 
+# todo.txt
+export TODOTXT_DEFAULT_ACTION=ls
+alias t='/home/syahrasi/Apps/todotxt/todo.sh'
+alias te="vim /home/syahrasi/Dropbox/todo/todo.txt"
 
 # missing path
 export PATH=$HOME/local/bin:$PATH
+
 export PATH=/opt/vagrant/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
@@ -146,10 +153,6 @@ alias pcf="php-cs-fixer"
 export PWS="$HOME/.safe/pws"
 alias pw='pws'
 
-# todo.txt
-export TODOTXT_DEFAULT_ACTION=ls
-alias t='~/todo/todo.sh'
-
 #useful aliases
 alias go='gnome-open .'
 alias lgrep='ls -la | grep'
@@ -162,6 +165,7 @@ alias cd...='cd ../../..'
 alias bx='bundle exec'
 alias rserver='ruby -run -e httpd . -p5000'
 alias pserver='php -S localhost:5555'
+alias pyserver='python -m SimpleHTTPServer 5555'
 
 alias grabpw='wget https://raw.github.com/somatonic/PWOnlineInstaller/master/grabpw.php'
 
@@ -182,6 +186,13 @@ alias g:mig="php artisan generate:migration"
 alias g:r="php artisan generate:resource"
 
 alias art="php artisan --env='local'"
+
+# node
+# alias node="/home/syahrasi/Apps/node-v5.1.0-linux-x86/bin/node"
+# alias npm="/home/syahrasi/Apps/node-v5.1.0-linux-x86/bin/npm"
+export PATH="$HOME/Apps/node-v5.3.0-linux-x86/bin:$PATH"
+
+alias cddata="cd /media/syahrasi/Data"
 
 # activate 256 color support for xterm
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
@@ -267,5 +278,10 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 # export PATH="$HOME/.gem/ruby/2.1.2/bin:$PATH"
 
-chruby ruby-2.2.1
+chruby ruby-2.2.2
 
+# Base16 Shell
+# BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+. ~/Apps/z/z.sh

@@ -44,6 +44,7 @@
 [core]
 	autocrlf = input
 	safecrlf = true
+  editor = vim
 [color]
 	ui = auto
   branch = auto
