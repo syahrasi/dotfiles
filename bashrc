@@ -108,6 +108,9 @@ export EDITOR="/usr/bin/vim"
 # export GIT_EDITOR='/usr/local/bin/vim'
 export GIT_EDITOR='/usr/bin/vim'
 
+alias vimf="vim -u NONE -N"
+alias vime="vim -u ~/dotfiles/essential.vim"
+
 # export PATH="~/.tmuxifier/bin:$PATH"
 #
 # eval "$(tmuxifier init -)"
@@ -139,7 +142,8 @@ export PATH=$HOME/local/bin:$PATH
 
 export PATH=/opt/vagrant/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/.composer/vendor/bin:$PATH
+# $HOME/.composer/vendor/bin
+export PATH=$HOME/.config/composer/vendor/bin:$PATH
 export PATH=vendor/bin:$PATH
 export PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH
 
@@ -166,6 +170,8 @@ alias bx='bundle exec'
 alias rserver='ruby -run -e httpd . -p5000'
 alias pserver='php -S localhost:5555'
 alias pyserver='python -m SimpleHTTPServer 5555'
+
+alias matikan='sudo shutdown -P now'
 
 alias grabpw='wget https://raw.github.com/somatonic/PWOnlineInstaller/master/grabpw.php'
 
@@ -278,10 +284,10 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 # export PATH="$HOME/.gem/ruby/2.1.2/bin:$PATH"
 
-chruby ruby-2.2.2
+chruby ruby-2.3.1
 
 # Base16 Shell
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 # [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-. ~/Apps/z/z.sh
+# . ~/Apps/z/z.sh

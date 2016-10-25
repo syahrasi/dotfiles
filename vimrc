@@ -97,14 +97,15 @@ Plugin 'DataWraith/auto_mkdir'
 Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
 " Plugin 'tobyS/skeletons.vim'
-" Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'stephpy/vim-php-cs-fixer'
 " Plugin 'pgilad/vim-skeletons'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'dericofilho/vim-phpfmt'
+" Plugin 'dericofilho/vim-phpfmt'
 Plugin 'ervandew/supertab'
 
 " Ctags
 Plugin 'majutsushi/tagbar'
+Plugin 'vim-php/tagbar-phpctags.vim'
 " Plugin 'craigemery/vim-autotag'
 Plugin 'szw/vim-tags'
 " Plugin 'kbairak/ColumnTags.vim'
@@ -306,12 +307,17 @@ autocmd BufNewFile,BufRead *.tpl set syntax=php
 autocmd BufNewFile,BufRead *.inc set syntax=php
 autocmd BufNewFile,BufRead *.vue set syntax=javascript
 
-let g:phpfmt_on_save = get(g:, 'phpfmt_on_save', 1)
-let g:phpfmt_php_path = "php"
-let g:phpfmt_enable_default_mapping = 1
-let g:phpfmt_exclude_list = "blade.php"
-let g:phpfmt_psr1 = 1
-let g:phpfmt_psr2 = 1
+" let g:phpfmt_on_save = get(g:, 'phpfmt_on_save', 1)
+" let g:phpfmt_php_path = "php"
+" let g:phpfmt_enable_default_mapping = 1
+" let g:phpfmt_exclude_list = "blade.php"
+" let g:phpfmt_psr1 = 1
+" let g:phpfmt_psr2 = 1
+
+let g:php_cs_fixer_level = "psr2"
+nnoremap <silent><leader>fd :call PhpCsFixerFixDirectory()<CR>
+" nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
+nnoremap <silent><leader>ff :w \| :call PhpCsFixerFixFile()<CR>
 
 
 "fix backspace
