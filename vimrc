@@ -47,6 +47,7 @@ Plugin 'Lokaltog/vim-distinguished'
 " Plugin '2072/PHP-Indenting-for-VIm.git'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'lvht/phpcd.vim'
 " Plugin 'JamshedVesuna/vim-markdown-preview'
 " Plugin 'xsbeats/vim-blade'
 Plugin 'jwalton512/vim-blade'
@@ -98,6 +99,7 @@ Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
 " Plugin 'tobyS/skeletons.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'w0rp/ale'
 " Plugin 'pgilad/vim-skeletons'
 Plugin 'easymotion/vim-easymotion'
 " Plugin 'dericofilho/vim-phpfmt'
@@ -107,8 +109,10 @@ Plugin 'ervandew/supertab'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-php/tagbar-phpctags.vim'
 " Plugin 'craigemery/vim-autotag'
-Plugin 'szw/vim-tags'
-" Plugin 'kbairak/ColumnTags.vim'
+" Plugin 'szw/vim-tags'
+"" Plugin 'kbairak/ColumnTags.vim'
+
+Plugin 'ludovicchabant/vim-gutentags'
 
 " Plugin 'vivkin/flatland.vim'
 Plugin 'haya14busa/incsearch.vim'
@@ -121,6 +125,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
 Plugin 'dahu/vim-fanfingtastic'
+Plugin 'tweekmonster/startuptime.vim'
 
 
 "tpope
@@ -319,6 +324,21 @@ nnoremap <silent><leader>fd :call PhpCsFixerFixDirectory()<CR>
 " nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
 nnoremap <silent><leader>ff :w \| :call PhpCsFixerFixFile()<CR>
 
+let g:ale_linters = {
+\   'php': ['php'],
+\}
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+
+
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+
+let g:ale_open_list = 1
+" Set this if you want to.
+" This can be useful if you are combining ALE with
+" some other plugin which sets quickfix errors, etc.
+let g:ale_keep_list_window_open = 0
 
 "fix backspace
 set backspace=2
@@ -427,8 +447,18 @@ let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 " nnoremap <buffer> <C-D> :call pdv#DocumentWithSnip()<CR>
 nmap <Leader>d :call pdv#DocumentWithSnip()<CR>
 
-" tagbar
+" tag
 nmap <F8> :TagbarToggle<CR>
+
+let g:tagbar_phpctags_bin='~/.vim/phpctags'
+
+let g:gutentags_cache_dir = '~/.vim/gutentags'
+let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml',
+                            \ '*.phar', '*.ini', '*.rst', '*.md',
+                            \ '*vendor/*/test*', '*vendor/*/Test*',
+                            \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
+                            \ '*var/cache*', '*var/log*']
+
 
 nmap <Leader>t :!clear && phpunit<CR>
 nmap <Leader>t5 :!clear && phpunit %<CR>
@@ -492,6 +522,8 @@ function! IPhpExpandClass()
 endfunction
 autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
+
+let g:php_namespace_sort_after_insert = 1
 
 "-------------Laravel--------------
 
