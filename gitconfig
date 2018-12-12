@@ -44,7 +44,7 @@
   modulepath = /usr/lib/apache2/modules
 [core]
 	autocrlf = input
-	safecrlf = true
+	safecrlf = false
   editor = vim
 [color]
 	ui = auto

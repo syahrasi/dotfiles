@@ -88,6 +88,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'sniphpets/sniphpets'
 Plugin 'sniphpets/sniphpets-common'
+Plugin 'AndrewRadev/splitjoin.vim'
 " Plugin 'greyblake/vim-preview'
 " Plugin 'm2mdas/phpcomplete-extended'
 " Plugin 'm2mdas/phpcomplete-extended-laravel'
@@ -126,6 +127,7 @@ Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
 Plugin 'dahu/vim-fanfingtastic'
 Plugin 'tweekmonster/startuptime.vim'
+Plugin 'qpkorr/vim-renamer'
 
 
 "tpope
